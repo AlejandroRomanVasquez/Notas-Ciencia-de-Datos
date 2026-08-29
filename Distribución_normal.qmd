@@ -53,3 +53,6 @@ plot(
 ```
 
 La función `dnorm()` calcula la densidad de la distribución normal.
+
+
+HOLA
