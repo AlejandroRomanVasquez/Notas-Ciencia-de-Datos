@@ -1,0 +1,55 @@
+---
+title: "Distribución normal"
+author: "Alejandro Román Vásquez"
+format: html
+---
+
+# Introducción
+
+La distribución normal es una de las distribuciones de probabilidad
+más importantes en estadística.
+
+Decimos que una variable aleatoria $X$ tiene distribución normal con
+media $\mu$ y varianza $\sigma^2$ si
+
+$$
+X \sim N(\mu,\sigma^2).
+$$
+
+Su función de densidad está dada por
+
+$$
+f(x)=
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left\{
+-\frac{(x-\mu)^2}{2\sigma^2}
+\right\}.
+$$
+
+## La distribución normal estándar
+
+Cuando $\mu=0$ y $\sigma^2=1$, obtenemos la distribución normal estándar:
+
+$$
+Z\sim N(0,1).
+$$
+
+## Un ejemplo en R
+
+Podemos calcular la densidad de una normal estándar utilizando R.
+
+```{r}
+x <- seq(-4, 4, length.out = 500)
+
+y <- dnorm(x)
+
+plot(
+  x, y,
+  type = "l",
+  xlab = "x",
+  ylab = "f(x)",
+  main = "Densidad de la distribución normal estándar"
+)
+```
+
+La función `dnorm()` calcula la densidad de la distribución normal.
